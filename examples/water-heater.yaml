@@ -17,6 +17,7 @@ esp32:
     type: arduino
 
 logger:
+  baud_rate: 0
 
 api:
   encryption:
@@ -42,20 +43,23 @@ packages:
 
 sensor:
   - platform: adc
-    pin: GPIO2
+    pin: GPIO36
     id: vntc0
     update_interval: never
     attenuation: auto
+
   - platform: adc
-    pin: GPIO3
+    pin: GPIO39
     id: vntc1
     update_interval: never
     attenuation: auto
+
   - platform: adc
-    pin: GPIO4
+    pin: GPIO34
     id: vleak
     update_interval: never
     attenuation: auto
+
   - platform: resistance
     sensor: vntc0
     configuration: DOWNSTREAM
@@ -138,7 +142,7 @@ binary_sensor:
 
 switch:
   - platform: gpio
-    pin: GPIO7
+    pin: GPIO25
     id: adc_vcc
 
 interval:
