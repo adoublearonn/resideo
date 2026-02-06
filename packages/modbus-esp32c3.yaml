@@ -36,10 +36,10 @@ uart:
 irda_uart:
   - uart_id: rx_uart
     tx_en: false
-    invert: true
+    invert: false
   - uart_id: tx_uart
     tx_en: true
-    invert: false
+    invert: true
 
 modbus:
   uart_id: rx_uart
