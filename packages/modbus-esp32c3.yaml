@@ -1,7 +1,8 @@
 substitutions:
-  uart_dummy_tx: GPIO9
-  uart_tx: GPIO4
-  uart_rx: GPIO5
+  # ESP32-WROOM safe pins (avoid GPIO6-11 flash pins)
+  uart_dummy_tx: GPIO21
+  uart_tx: GPIO17
+  uart_rx: GPIO16
   modbus_id: modbus1
 
 external_components:
@@ -23,7 +24,6 @@ uart:
             if (!bytes.empty())
               id(tx_uart).write_array(bytes.data(), bytes.size());
 
-  # ESP32C3 UARTs can either be in RX or TX mode, so for fully async, lets use two
   - id: tx_uart
     tx_pin: $uart_tx
     baud_rate: 2400
