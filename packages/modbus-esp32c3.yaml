@@ -35,7 +35,7 @@ uart:
 # Enables appropriate IRDA register settings
 irda_uart:
   - uart_id: rx_uart
-    tx_en: false
+    tx_en: true
     invert: false
   - uart_id: tx_uart
     tx_en: true
