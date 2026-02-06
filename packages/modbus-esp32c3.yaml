@@ -6,7 +6,7 @@ substitutions:
   modbus_id: modbus1
 
 external_components:
-  - source: github://russdill/resideo@main
+  - source: github://adoublearonn/resideo@main
     components: [ irda_uart ]
 
 uart:
