@@ -104,7 +104,7 @@ sensor:
 
   - platform: pulse_counter
     id: flow_rate
-    pin: GPIO10
+    pin: GPIO27
     name: "Flow rate"
     update_interval: 1s
     unit_of_measurement: "L/min"
